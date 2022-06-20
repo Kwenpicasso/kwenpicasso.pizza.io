@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="icons/css/all.css">
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+            
+        }
+        nav{
+            width: 100vw;
+            height: 75px;
+            line-height: 75px;
+            padding: 0 80px;
+            padding-top: 10px;
+            background-color: black;
+        }
+        .logo{
+            float: left;
+        }
+        .logo p{
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            letter-spacing: 1.5px;
+        }
+        nav ul {
+            float: right;
+            margin-top: -10px;
+
+        }
+        nav ul li{
+            display: inline-block;
+        }
+        nav ul li a{
+            color: whitesmoke;
+            text-transform: uppercase;
+            padding: 0 20px;
+            font-size: 30px;
+        }
+        nav ul li a:hover{
+            color: red;
+        }
+        .checkbtn{
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            float: right;
+            display: none;
+        }
+        #check{
+            display: none;
+        }
+        
+        
+
+       
+                
+            
+        header{
+            background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('img/shourav-sheikh-a66sGfOnnqQ-unsplash.jpg');
+            background-position: center;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            
+        }
+        
+       
+       
+        
+        
+        
+        button{
+            
+            color: white;
+            background-color: red;
+            padding: 10px 30px;
+            letter-spacing: .1em;
+            border: transparent;
+        
+        }
+        button:hover{
+            color: black;
+            background-color: black;
+
+        }
+        button a{
+            font-size: 18px;
+            color: white;
+            text-transform: capitalize;
+            
+        }
+        
+       
+        .wrapper h1{
+            font-size: 90px;
+            color: black;
+            font-weight: bold;
+            background-image: url('img/the-nix-company-ljvm17bH-e0-unsplash.jpg');
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .wrapper h2{
+            font-size: 60px;
+            color: transparent;
+            background: linear-gradient(90deg,rgba(34,193,195,1) 0%,rgba(253,187,45,1) 67%);
+            -webkit-background-clip: text;
+            
+        }
+        .wrapper p{
+            font-size: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        
+        .foodday{
+            width: 100%;
+            height: 50vh;
+            background-image: url('img/divani-diva-s0duM7x1yuA-unsplash.jpg');
+            
+        }
+        .wrapper{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: center;
+        }
+        .kwen{
+            flex-basis: 50%;
+        }
+        .image{
+            flex-basis: 50%;
+            margin: auto;
+        }
+        .image img{
+            width: 70%;
+            margin-top: 50px;
+            
+            
+        }
+        .bkimage{
+            width: 100%;
+            height: 80vh;
+            margin-top: 70px;
+            background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url('img/pexels-trang-doan-1099680.jpg');
+            background-position: top;
+            background-size: cover;
+            text-align: center;
+            padding-top: 200px;
+            
+           
+        }
+        .bkimage h1{
+            font-size: 90px;
+            font-family: 'Kaushan Script', cursive;
+            color: transparent;
+            background: linear-gradient(90deg,rgba(34,193,195,1) 0%,rgba(253,187,45,1) 67%);
+            -webkit-background-clip: text;
+
+        }
+        .bkimage p{
+            font-size: 20px;
+            color: whitesmoke;
+            padding-bottom: 20px;
+        }
+
+
+        .container{
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: center;
+            margin-top: 20px;
+            padding-bottom: 50px;
+        }
+        .pizza{
+            flex-basis: 50%;
+        }
+        .picture{
+            flex-basis: 50%;
+            margin: auto;
+            
+        }
+        .picture img{
+            width: 70%;
+            margin-top: 50px;
+        
+        }
+        .pizza h1{
+            font-size: 90px;
+            font-family: 'Kaushan Script', cursive;
+            color: transparent;
+            background: linear-gradient(90deg,rgba(34,193,195,1) 0%,rgba(253,187,45,1) 67%);
+            -webkit-background-clip: text;
+        }
+        .pizza h2{
+            font-size: 40px;
+            font-family: 'Kaushan Script', cursive;
+            color: transparent;
+            background: linear-gradient(90deg,rgba(34,193,195,1) 0%,rgba(253,187,45,1) 67%);
+            -webkit-background-clip: text;
+        }
+        .pizza p{
+            font-size: 20px;
+            padding: 20px;
+        }
+        .black{
+            
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: center;
+            margin-top: 40px;
+            justify-content: space-between;
+            background-color: black;
+            padding: 60px 0;
+        
+            
+        }
+        .blackcontent{
+            width: 24%;
+            
+        }
+        .blackcontent h2{
+            font-size: 35px;
+            color: red;
+            font-weight: bolder;
+            font-family: 'Kaushan Script', cursive;
+        }
+        .blackcontent p{
+            font-size: 25px;
+            color: white;
+            font-weight: bolder;
+            font-family: 'Kaushan Script', cursive;
+        }
+        .contact{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            height: 100vh;
+            padding-top: 60px;
+            background-image: url('img/noita-digital-QZX8jbK1xEw-unsplash.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+        .contact h1 {
+            font-size: 70px;
+            font-family: 'Kaushan Script', cursive;
+            color: whitesmoke;
+
+        }
+        .contact input{
+            padding: 20px;
+            width: 500px;
+            margin-bottom: 10px;
+            font-size: 15px;
+            color: white;
+            background-color: black;
+            
+        }
+        .contact textarea{
+            color: white;
+            background-color: black;
+            width: 500px;
+            font-size: 15px;
+            
+        }
+        form{
+            margin-top: 20px;
+        }
+        .sendbtn{
+            padding: 20px;
+            width: 500px;
+            margin-bottom: 10px;
+            font-size: 10px;
+
+        }
+        .header-content{
+            text-align: left;
+            padding-top: 240px;
+            margin-left: 30px;
+          
+        }
+        .header-content h2{
+            font-size: 30px;
+            color: white;
+            letter-spacing: 1.5px;
+            margin-bottom: -10px;
+        }
+        .header-content h1{
+            font-size: 100px;
+            color: red;
+            font-family: 'Kaushan Script', cursive;
+
+        }
+        .header-content p{
+            color: white;
+            font-size: 20px;
+            padding-bottom: 10px;
+            font-style: italic;
+            
+        }
+        span{
+            color: red;
+            font-family: 'Kaushan Script', cursive;
+        }
+        .logo{
+            font-family: 'Kaushan Script', cursive;
+            margin-top: -10px;
+        }
+        @media screen and (max-width:767px){
+            nav{
+                padding: 0 30px;
+
+            }
+            .checkbtn{
+                display: block;
+            }
+            nav ul{
+                width: 100%;
+                height: 100%;
+                background-color: crimson;
+                position: fixed;
+                top: 75px;
+                left: -100%;
+                text-align: center;
+                transition: 0.4s ease;
+            }
+            nav ul li{
+                display: block;
+                margin: 60px 0;
+                line-height: 20px;
+            }
+            nav ul li a:hover{
+            color: black;
+        }
+            #check:checked ~ ul{
+                left: 0;
+            }
+            .header-content h2{
+                font-size: 20px;
+            }
+            .header-content h1{
+                font-size: 80px;
+            }
+            .header-content p{
+                font-size: 18px;
+            }
+            .logo p{
+                font-size: 30px;
+                padding-top: 10px;
+                margin-left: 10px;
+            }
+            .header-content{
+                text-align: center;
+                margin:0 20px;
+            }
+            .kwen{
+                flex: 100%;
+            }
+            .image{
+                flex: 100%;
+            }
+            .bkimage h1{
+                font-size: 50px;
+            }
+            .bkimage p{
+                font-size: 20px;
+            }
+            .picture{
+                flex: 100%;
+            }
+            .pizza{
+                flex: 100%;
+            }
+            .blackcontent{
+            width: 100%;
+            margin: 10px 0;
+            
+        }
+        .contact h1{
+            font-size: 50px;
+        }
+        .wrapper h1{
+            font-size: 70px;
+
+        }
+        .wrapper h2{
+            font-size: 50px;
+        }
+        .wrapper{
+            margin-top: 50px;
+        }
+        .pizza h1{
+            font-size: 60px;
+        }
+        .contact input{
+            padding: 20px;
+            width: 400px;
+            margin-bottom: 10px;
+            font-size: 15px;
+            color: white;
+            background-color: black;
+            
+        }
+        .contact textarea{
+            color: white;
+            background-color: black;
+            width: 400px;
+            font-size: 15px;
+            
+        }
+        form{
+            margin-top: 20px;
+        }
+        .sendbtn{
+            padding: 20px;
+            width: 400px;
+            margin-bottom: 10px;
+            font-size: 10px;
+
+        }
+        
+        
+            
+        }
+       
+        
+        
+        
+        
+        
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn"><i class="fa-solid fa-bars"></i></label>
+        <div class="logo">
+            <p>Uber<span>eats</span></p>
+        </div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">menu</a></li>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">contact us</a></li>
+        </ul>
+    </nav>
+
+        
+      
+      
+      
+    <header class="cover">
+        
+            <div class="header-content">
+            <h2>Quick Deliveries</h2>
+            <h1>UBER EATS</h1>
+            <P>We bring our customers round the world fine dining, in a unique and creative environment<br>The restautant's interior captures the ambulance of some of the geographical locations.</P>
+            <button><a href="#">Order Now</a></button>
+       
+        
+            </div>
+
+
+        
+    </header>
+    <section>
+        <div class="wrapper">
+            <div class="kwen">
+                <h1 class="abouthead">ABOUT US</h1>
+                <h2>Ubereats local food</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum totam quod laborum illo molestiae odit reiciendis architecto a ad deserunt, consectetur quam eos? Explicabo eos ea optio tempora voluptatibus, expedita praesentium quasi sunt ipsum deleniti,
+                    <br> corrupti porro dolorum! Labore doloribus ratione asperiores doloremque porro officiis eos quos quae nemo iusto. Quo eos hic, quibusdam deleniti quasi natus saepe explicabo accusantium nisi 
+         
+                </p>
+                
+            </div>
+            
+                <div class="image">
+                    <img src="img/seb-reivers-0oHOlLWZ8hI-unsplash.jpg">
+                </div>
+                
+            
+            
+        </div>
+    </section>
+
+
+
+
+    <section>
+        <div class="bkimage">
+            <h1>FOOD OF THE YEAR</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, natus!</p>
+            <button><a href="#">learn more</a></button>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class="container">
+    
+                <div class="picture">
+                    <img src="img/the-nix-company-ljvm17bH-e0-unsplash.jpg">
+                </div>
+
+
+                <div class="pizza">
+                    <h1>OUR ELITE PIZZA</h1>
+                    <h2>Come try out our special menu</h2>
+                    
+                    
+                    
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum totam quod laborum illo molestiae odit reiciendis architecto a ad deserunt, consectetur quam eos? Explicabo eos ea optio tempora voluptatibus, expedita praesentium quasi sunt ipsum deleniti,
+                        <br> corrupti porro dolorum! Labore doloribus ratione asperiores doloremque porro officiis eos quos quae nemo iusto. Quo eos hic, quibusdam deleniti quasi natus saepe explicabo accusantium nisi Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia vero dignissimos quaerat voluptate perspiciatis deleniti porro recusandae veritatis officia deserunt! Quos doloremque omnis error accusantium temporibus impedit atque fugit, rerum asperiores repudiandae sed a eaque exercitationem unde quod. Iusto cupiditate odio, eius dolor vitae nesciunt ad mollitia molestias. Natus sapiente est laudantium, cum perspiciatis consequuntur sit eius modi blanditiis ipsam laboriosam, autem, velit aperiam. Modi nisi vitae ad omnis consequuntur placeat aut voluptatem delectus? Minus ut itaque suscipit assumenda hic et velit facere, quidem, voluptatibus molestiae iure sit similique dolores ratione repudiandae maiores voluptate neque ipsum. Unde consectetur similique nemo.
+             
+                    </p>
+                    
+                </div>
+                
+            
+            
+        </div>
+    </section>
+
+
+    <section>
+        <div class="black">
+            <div class="blackcontent">
+                <h2>1000+</h2>
+                <p>Cheese Burger</p>
+            </div>
+            <div class="blackcontent">
+                <h2>3000+</h2>
+                <p>Cheese Pizza</p>
+            </div>
+            <div class="blackcontent">
+                <h2>10000+</h2>
+                <p>Drinks</p>
+            </div>
+            <div class="blackcontent">
+                <h2>7000+</h2>
+                <p>Cocktail</p>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section>
+        <div class="contact">
+            <h1>Contact</h1>
+            <form >
+                <input type="text" placeholder="Enter Name">
+                <br>
+                <input type="email" placeholder="Enter Email">
+                <br>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter Message"></textarea>
+            </form>
+            <button class="sendbtn"><a href="#">Send</a></button>
+        </div>
+    </section>
+
+    
+</body>
+</html>
